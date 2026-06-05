@@ -51,8 +51,7 @@ Pensamiento Computacional, Algoritmos y Programación
 - Solo se pueden eliminar pilotos con 0 puntos acumulados
 - Se solicita confirmación antes de eliminar un piloto
 
-## Fase
-Entrega Fase 1 — Versión inicial del producto
+
 
 ## Fase
 Entrega Fase 1 — Versión inicial del producto
