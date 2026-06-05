@@ -1,3 +1,11 @@
+# ============================================
+# Proyecto: Velocity Racing Team - TPO
+# Materia: Pensamiento Computacional, Algoritmia y Programación
+# Equipo 06
+# Integrantes: Pilar Rivas, Martina Medina, Valentina Mendez
+# Autoría: El equipo trabajó de forma colaborativa. No se dividieron tareas por función ni por módulo.
+# ============================================
+
 def ingresarPositivo(msg):
     '''Pide un entero por teclado y valida que sea positivo (> 0).
     Repite hasta recibir un valor valido y lo retorna.'''
