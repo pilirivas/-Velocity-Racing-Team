@@ -1,3 +1,11 @@
+# ============================================
+# Proyecto: Velocity Racing Team - TPO
+# Materia: Pensamiento Computacional, Algoritmia y Programación
+# Equipo 06
+# Integrantes: Pilar Rivas, Martina Medina, Valentina Mendez
+# Autoría: El equipo trabajó de forma colaborativa. No se dividieron tareas por función ni por módulo.
+# ============================================
+
 import Funciones
 
 def main():
