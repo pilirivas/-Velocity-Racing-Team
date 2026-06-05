@@ -1,7 +1,22 @@
 # Velocity Racing Team - Sistema de Gestión Deportiva
 
+## Repositorio
+https://github.com/pilirivas/-Velocity-Racing-Team
+
 ## Descripción
-En este codigo dearrollado en Python, se permite administrar información sobre pilotos de Formula 1. Permite registrar, modificar, eliminar y visualizar datos de pilotos mediante un menú de opciones.
+En este codigo desarrollado en Python, se permite administrar información sobre pilotos de Formula 1. Permite registrar, modificar, eliminar y visualizar datos de pilotos mediante un menú de opciones.
+
+## Alcance
+El sistema permite centralizar y administrar la información deportiva de los pilotos de una escudería de Fórmula 1. A través de un menú interactivo, el usuario puede:
+
+- Registrar nuevos pilotos (alta) ingresando sus datos por teclado.
+- Eliminar pilotos (baja) que tengan cero puntos acumulados, con confirmación previa.
+- Modificar los puntos acumulados de un piloto existente.
+- Visualizar un informe general con todos los pilotos ordenados por puntos.
+
+Para cada piloto se administra: nombre, número identificatorio del monoplaza, escudería, puntos acumulados, tiempo promedio por vuelta, presupuesto asignado y cantidad de abandonos en la temporada.
+
+Esta entrega corresponde a la Fase 1 del proyecto: versión inicial con gestión básica y visualización de datos.
 
 ## Integrantes
 - Pilar Rivas
@@ -35,6 +50,9 @@ Pensamiento Computacional, Algoritmos y Programación
 - El tiempo promedio y presupuesto aceptan decimales no negativos
 - Solo se pueden eliminar pilotos con 0 puntos acumulados
 - Se solicita confirmación antes de eliminar un piloto
+
+## Fase
+Entrega Fase 1 — Versión inicial del producto
 
 ## Fase
 Entrega Fase 1 — Versión inicial del producto
