@@ -30,7 +30,7 @@ Pensamiento Computacional, Algoritmos y Programación
 ## Validaciones implementadas
 - El nombre debe tener nombre y apellido (dos palabras)
 - El número identificatorio debe ser positivo y no puede repetirse
-- La escudería debe ser una de las escuderías válidas de la temporada
+- La escudería debe ser una de las escuderías válidas de la temporada y no puede quedar vacia
 - Los puntos y abandonos aceptan 0 o positivos (no negativos)
 - El tiempo promedio y presupuesto aceptan decimales no negativos
 - Solo se pueden eliminar pilotos con 0 puntos acumulados
