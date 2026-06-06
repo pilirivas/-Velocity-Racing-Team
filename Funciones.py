@@ -9,21 +9,21 @@
 def ingresarPositivo(msg):
     '''Pide un entero por teclado y valida que sea positivo (> 0).
     Repite hasta recibir un valor valido y lo retorna.'''
-    num = int(input(msg))
-    while num <= 0:
+    num = input(msg) # no usamos int() porque .isdigit() solol funciona con texto
+    while not num.isdigit() or int(num) <= 0:
         print("Error debe ser positivo")
-        num = int(input(msg))
-    return num
+        num =input(msg)
+    return int(num)
 
 
 def ingresarNoNegativo(msg):
     '''Pide un entero por teclado y valida que no sea negativo (acepta 0).
     Repite hasta recibir un valor valido y lo retorna.'''
-    num = int(input(msg))
-    while num < 0:
+    num = input(msg)
+    while not num.isdigit(): #no hace falta especifiar el or num<0 porque el - en un numero negativo ya no es un digito
         print("Error debe ser positivo o cero")
-        num = int(input(msg))
-    return num
+        num = input(msg)
+    return int(num)
 
 
 def ingresarNoNegativoFloat(msg):
@@ -75,10 +75,10 @@ def ingresar_opcionMenu(desde, hasta):
     '''Pide una opcion del menu y valida que este dentro del rango
     [desde, hasta]. Repite hasta recibir un valor valido y lo retorna.'''
     op = int(input("Seleccione una opcion:"))
-    while op < desde or op > hasta:
+    while op.isdigit() or int(op) < desde or int(op) > hasta:
         print("La opcion seleccionada no es valida")
-        op = int(input("Seleccione una opcion:"))
-    return op
+        op = input("Seleccione una opcion:")
+    return int(op)
 
 
 def altaPiloto(nombres, numero_identificatorio, escuderia, puntos_acumulados, tiempo_promedio, presupuesto_asignado, abandonos):
@@ -174,7 +174,7 @@ def eliminarPiloto(nombres, numero_identificatorio, escuderia, puntos_acumulados
     '''Elimina un piloto buscado por su numero identificatorio.
     Solo se permite si tiene 0 puntos, y pide confirmacion antes de borrar.
     Usa el mismo indice para sacar al piloto de TODAS las listas paralelas.'''
-    numeroEliminar = int(input("Ingrese el numero identificatorio del piloto a eliminar: "))
+    numeroEliminar = ingresarPositivo("Ingrese el numero identificatorio del piloto a eliminar: ")
     indice = buscarPorNumero(numero_identificatorio, numeroEliminar)
     if indice != -1:
         # Regla del negocio: solo se puede eliminar si tiene 0 puntos.
@@ -182,7 +182,7 @@ def eliminarPiloto(nombres, numero_identificatorio, escuderia, puntos_acumulados
             print("Error: no se puede eliminar a un piloto con puntos acumulados.")
             return
         # Confirmacion antes de eliminar (operacion irreversible).
-        confirmacion = input("Confirma que desea eliminar a '" + nombres[indice] + "'? (s/n): ")
+        confirmacion = input("Confirma que desea eliminar a '" + nombres[indice] + "'? (s/n): ").lower()
         if confirmacion == "s":
             # Se elimina la misma posicion en todas las listas paralelas.
             nombres.pop(indice)
@@ -202,7 +202,7 @@ def eliminarPiloto(nombres, numero_identificatorio, escuderia, puntos_acumulados
 def modificarPuntos(nombres, numero_identificatorio, escuderia, puntos_acumulados, tiempo_promedio, presupuesto_asignado, abandonos):
     '''Modifica los puntos acumulados de un piloto buscado por su numero.
     Reemplaza el valor en la posicion encontrada por la busqueda secuencial.'''
-    numeroModificar = int(input("Ingrese el numero identificatorio del piloto para modificar sus puntos: "))
+    numeroModificar = ingresarPositivo("Ingrese el numero identificatorio del piloto para modificar sus puntos: ")
     indice = buscarPorNumero(numero_identificatorio, numeroModificar)
     if indice != -1:
         nuevosPuntos = ingresarNoNegativo("Ingrese los nuevos puntos acumulados del piloto: ")
