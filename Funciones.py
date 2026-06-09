@@ -15,7 +15,6 @@ def ingresarPositivo(msg):
         num =input(msg)
     return int(num)
 
-
 def ingresarNoNegativo(msg):
     '''Pide un entero por teclado y valida que no sea negativo (acepta 0).
     Repite hasta recibir un valor valido y lo retorna.'''
@@ -70,16 +69,14 @@ def opciones_menu():
     print("5: Salida")
     print("=" * 50)
 
-
 def ingresar_opcionMenu(desde, hasta):
-    '''Pide una opcion del menu y valida que este dentro del rango
-    [desde, hasta]. Repite hasta recibir un valor valido y lo retorna.'''
-    op = int(input("Seleccione una opcion:"))
+    '''Valida ingresar un valor en el rango desde-hasta
+    retorna el valor ingresado del teclado'''
+    op = input("Seleccione una opcion:")
     while not op.isdigit() or int(op) < desde or int(op) > hasta:
         print("La opcion seleccionada no es valida")
         op = input("Seleccione una opcion:")
     return int(op)
-
 
 def altaPiloto(nombres, numero_identificatorio, escuderia, puntos_acumulados, tiempo_promedio, presupuesto_asignado, abandonos):
     '''Da de alta a un piloto. Recibe las listas paralelas donde se
