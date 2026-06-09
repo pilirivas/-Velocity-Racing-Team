@@ -75,7 +75,7 @@ def ingresar_opcionMenu(desde, hasta):
     '''Pide una opcion del menu y valida que este dentro del rango
     [desde, hasta]. Repite hasta recibir un valor valido y lo retorna.'''
     op = int(input("Seleccione una opcion:"))
-    while op.isdigit() or int(op) < desde or int(op) > hasta:
+    while not op.isdigit() or int(op) < desde or int(op) > hasta:
         print("La opcion seleccionada no es valida")
         op = input("Seleccione una opcion:")
     return int(op)
