@@ -235,11 +235,17 @@ def escuderiasDisponibles(esc_nombres, esc_paises, esc_sponsors):
 
 def agregarEscuderia(esc_nombres, esc_paises, esc_sponsors):
     '''Agrega una nueva escuderia con pais y sponsors.'''
-    nuevaEscuderia = input("Ingrese el nombre de la nueva escuderia: ").strip().upper()
+    nuevaEscuderia = input("Ingrese el nombre de la nueva escuderia: ").upper().strip()
+    while nuevaEscuderia == "":
+        print(ROJO + "Error: el nombre de la escuderia no puede quedar vacio." + NORMAL)
+        nuevaEscuderia = input("Ingrese el nombre de la nueva escuderia: ").upper().strip()
     if nuevaEscuderia in esc_nombres:
         print(ROJO + "La escuderia ya existe." + NORMAL)
     else:
-        pais     = input("Ingrese el pais de origen: ").upper().strip()
+        pais = input("Ingrese el pais de origen: ").upper().strip()
+        while pais == "":
+            print(ROJO + "Error: el pais no puede quedar vacio." + NORMAL)
+            pais = input("Ingrese el pais de origen: ").upper().strip()
         sponsors = pedirSponsors()
         esc_nombres.append(nuevaEscuderia)
         esc_paises.append(pais)
